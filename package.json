@@ -1,0 +1,24 @@
+{
+  "name": "sidim-v2",
+  "version": "1.0.0",
+  "description": "Sistema de ideas de mejora",
+  "main": "./src/index.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "electron",
+    "javascript",
+    "CRUD",
+    "SQL",
+    "CSS"
+  ],
+  "author": "Alan Gloria",
+  "license": "MIT",
+  "dependencies": {
+    "electron": "^18.2.3",
+    "electron-reload": "^2.0.0-alpha.1",
+    "promise-mysql": "^5.2.0"
+  }
+}
