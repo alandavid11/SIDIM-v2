@@ -10,7 +10,7 @@ function createWindow() {
             nodeIntegration: true
         }
     })
-    window.loadFile('src/ui/index.html');
+    window.loadFile('src/index.html');
 }
 
 module.exports = {
