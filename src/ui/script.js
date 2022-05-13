@@ -45,3 +45,9 @@ function updateProgressbar() {
   progress.style.width =
     ((progressActive.length - 1) / (progressSteps.length - 1)) * 100 + "%";
 }
+
+/* Auto altura para el input de idea de mejora */
+function auto_height(elem) { 
+    elem.style.height = "1px";
+    elem.style.height = (15+elem.scrollHeight)+"px";
+}

@@ -21,7 +21,8 @@
     margin-bottom: 0.5rem;
   }
   
-  input {
+  input,
+  textarea {
     display: block;
     width: 100%;
     padding: 0.75rem;
@@ -102,11 +103,12 @@
   .progress-step-active {
     background-color: var(--primary-color);
     color: #f3f3f3;
+    text-align: center;
   }
   
   /* Form */
   .form {
-    width: clamp(320px, 30%, 430px);
+    width: clamp(420px, 30%, 530px);
     margin: 0 auto;
     border: 1px solid #ccc;
     border-radius: 0.35rem;
@@ -138,6 +140,10 @@
     }
   }
   
+  .auto_height { /* CSS */
+    width: 100%;
+  }
+  
   /* Button */
   .btns-group {
     display: grid;
@@ -159,3 +165,77 @@
   .btn:hover {
     box-shadow: 0 0 0 2px #fff, 0 0 0 3px var(--primary-color);
   }
+
+/*   Radio selector (boton para elegir unidad de negocio) */
+
+@import url('https://fonts.googleapis.com/css?family=Lato:400,500,600,700&display=swap');
+
+.wrapper{
+  display: inline-flex;
+  background: #fff;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: .5rem;
+  padding: 0;
+}
+.wrapper .option{
+  background: #fff;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 0 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 0;
+  border: 2px solid lightgrey;
+  transition: all 0.3s ease;
+}
+.wrapper .option .dot{
+  height: 20px;
+  width: 20px;
+  background: #d9d9d9;
+  border-radius: 50%;
+  position: relative;
+}
+.wrapper .option .dot::before{
+  position: absolute;
+  content: "";
+  top: 4px;
+  left: 4px;
+  width: 12px;
+  height: 12px;
+  background: #0069d9;
+  border-radius: 50%;
+  opacity: 0;
+  transform: scale(1.5);
+  transition: all 0.3s ease;
+}
+input[type="radio"]{
+  display: none;
+}
+#option-1:checked:checked ~ .option-1,
+#option-2:checked:checked ~ .option-2{
+  border-color: #0069d9;
+  background: #0069d9;
+}
+#option-1:checked:checked ~ .option-1 .dot,
+#option-2:checked:checked ~ .option-2 .dot{
+  background: #fff;
+}
+#option-1:checked:checked ~ .option-1 .dot::before,
+#option-2:checked:checked ~ .option-2 .dot::before{
+  opacity: 1;
+  transform: scale(1);
+}
+.wrapper .option span{
+  font-size: 20px;
+  color: #808080;
+}
+#option-1:checked:checked ~ .option-1 span,
+#option-2:checked:checked ~ .option-2 span{
+  color: #fff;
+}

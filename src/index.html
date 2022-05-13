@@ -8,34 +8,36 @@
     <script src="./ui/script.js" defer></script>
     <title>Ideas de Mejora</title>
   </head>
+
+
   <body>
     <form action="#" class="form">
-      <h1 class="text-center">Registrar idea de mejora</h1>
+      <h2 class="text-center">Registrar idea de mejora</h2>
       <!-- Progress bar -->
       <div class="progressbar">
         <div class="progress" id="progress"></div>
         
         <div
           class="progress-step progress-step-active"
-          data-title="Intro"
+          data-title="Datos personales"
         ></div>
-        <div class="progress-step" data-title="Contact"></div>
-        <div class="progress-step" data-title="ID"></div>
-        <div class="progress-step" data-title="Password"></div>
+        <div class="progress-step" data-title="Area"></div>
+        <div class="progress-step" data-title="Idea"></div>
+        <!-- <div class="progress-step" data-title="Final"></div> -->
       </div>
 
       <!-- Steps -->
       <div class="form-step form-step-active">
         <div class="input-group">
-          <label for="username">Numero de empleado</label>
+          <label for="n.empleado">Numero de empleado</label>
           <input type="number" name="n.empleado" id="n.empleado" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="4" onkeypress="return event.charCode >= 48 && event.charCode <= 57" />
         </div>
         <div class="input-group">
-          <label for="position">Nombre</label>
+          <label for="name">Nombre</label>
           <input type="text" name="name" id="name" />
         </div>
         <div class="input-group">
-          <label for="position">Area</label>
+          <label for="area.empleado">Area</label>
           <select name="area.empleado" id="area.empleado">
             <option>Gruñón</option>
             <option>Feliz</option>
@@ -47,53 +49,54 @@
           </select>
         </div>
         <div class="">
-          <a href="#" class="btn btn-next width-50 ml-auto">Next</a>
+          <a href="#" class="btn btn-next width-50 ml-auto">Siguiente</a>
         </div>
       </div>
       <div class="form-step">
         <div class="input-group">
-          <label for="phone">Phone</label>
-          <input type="text" name="phone" id="phone" />
+          <label for="linea.idea">Negocio</label>
+          <div class="wrapper">
+            <input type="radio" name="select" id="option-1" checked>
+            <input type="radio" name="select" id="option-2">
+              <label for="option-1" class="option option-1">
+                <div class="dot"></div>
+                 <span>Turbo/Reman</span>
+                 </label>
+              <label for="option-2" class="option option-2">
+                <div class="dot"></div>
+                 <span>Emisiones</span>
+              </label>
+           </div>
         </div>
         <div class="input-group">
-          <label for="email">Email</label>
-          <input type="text" name="email" id="email" />
+          <label for="linea.idea">Línea o área</label>
+          <input type="text" name="linea.idea" id="linea.idea" />
+        </div>
+        <div class="input-group">
+          <label for="est.idea">Estación</label>
+          <input type="text" name="est.idea" id="est.idea" />
+        </div>
+        <div class="input-group">
+          <label for="jefe.idea">Jefe inmediato</label>
+          <input type="text" name="jefe.idea" id="jefe.idea" />
         </div>
         <div class="btns-group">
-          <a href="#" class="btn btn-prev">Previous</a>
-          <a href="#" class="btn btn-next">Next</a>
+          <a href="#" class="btn btn-prev">Atras</a>
+          <a href="#" class="btn btn-next">Siguiente</a>
         </div>
       </div>
       <div class="form-step">
         <div class="input-group">
-          <label for="dob">Date of Birth</label>
-          <input type="date" name="dob" id="dob" />
+          <label for="idea">Idea</label>
+          <textarea name="idea" id="idea" rows="3" class="auto_height" oninput="auto_height(this)"></textarea>
         </div>
         <div class="input-group">
-          <label for="ID">National ID</label>
-          <input type="number" name="ID" id="ID" />
+          <label for="benef.idea">Beneficios que aporta tu idea</label>
+          <textarea name="benef.idea" id="benef.idea" rows="3" class="auto_height" oninput="auto_height(this)"></textarea>
         </div>
         <div class="btns-group">
-          <a href="#" class="btn btn-prev">Previous</a>
-          <a href="#" class="btn btn-next">Next</a>
-        </div>
-      </div>
-      <div class="form-step">
-        <div class="input-group">
-          <label for="password">Password</label>
-          <input type="password" name="password" id="password" />
-        </div>
-        <div class="input-group">
-          <label for="confirmPassword">Confirm Password</label>
-          <input
-            type="password"
-            name="confirmPassword"
-            id="confirmPassword"
-          />
-        </div>
-        <div class="btns-group">
-          <a href="#" class="btn btn-prev">Previous</a>
-          <input type="submit" value="Submit" class="btn" />
+          <a href="#" class="btn btn-prev">Atras</a>
+          <input type="submit" value="Enviar" class="btn" />
         </div>
       </div>
     </form>
