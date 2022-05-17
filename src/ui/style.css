@@ -107,12 +107,13 @@
   }
   
   /* Form */
-  .form {
+  .form,
+  .main {
     width: clamp(420px, 30%, 530px);
     margin: 0 auto;
     border: 1px solid #ccc;
     border-radius: 0.35rem;
-    padding: 1.5rem;
+    padding: 1.95rem;
   }
   
   .form-step {
@@ -127,6 +128,18 @@
   
   .input-group {
     margin: 2rem 0;
+  }
+
+  .inputNempleado{
+
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    width: 20%;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    text-align: center;
   }
   
   @keyframes animate {
@@ -150,6 +163,12 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
   }
+
+  .btns-groupMain {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
   
   .btn {
     padding: 0.75rem;
@@ -166,8 +185,8 @@
     box-shadow: 0 0 0 2px #fff, 0 0 0 3px var(--primary-color);
   }
 
-/*   Radio selector (boton para elegir unidad de negocio) */
 
+/*   Botones selector (boton para elegir unidad de negocio) */
 @import url('https://fonts.googleapis.com/css?family=Lato:400,500,600,700&display=swap');
 
 .wrapper{

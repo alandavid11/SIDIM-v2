@@ -11,23 +11,43 @@
 
 
   <body>
-    <form action="#" class="form">
+    <!-- Forma principal (Pantalla principal) -->
+    <form action="" class="main" id="main">
+        <h2>Sistema de ideas de mejora</h2>
+        <div class="btns-groupMain">
+          <a href="#" class="btn btn-nextMain">Subir idea</a>
+          <a href="#" class="btn btn-prev">Consultar puntos</a>
+        </div>
+    </form>
+
+   <!--  Formulario apra subir tu idea de mejora -->
+    <form action="#" class="form" id="form">
       <h2 class="text-center">Registrar idea de mejora</h2>
+
       <!-- Progress bar -->
       <div class="progressbar">
         <div class="progress" id="progress"></div>
         
-        <div
-          class="progress-step progress-step-active"
-          data-title="Datos personales"
-        ></div>
+        <div class="progress-step progress-step-active" data-title="Integrantes"></div>
+        <div class="progress-step" data-title="Nombre"></div>
         <div class="progress-step" data-title="Area"></div>
         <div class="progress-step" data-title="Idea"></div>
-        <!-- <div class="progress-step" data-title="Final"></div> -->
       </div>
 
       <!-- Steps -->
       <div class="form-step form-step-active">
+        <div class="input-group">
+          <label for="n.empleado">Numero de integrantes</label>
+          <h6>(Maximo 3 integrantes)</h6>
+          <input type="number" name="n.empleado" id="n.empleado" class="inputNempleado" max="3" onkeydown="return false" onkeypress="return event.charCode >= 48 && event.charCode <= 57" />
+        </div>
+        <div class="btns-group">
+          <a href="#" class="btn btn-prevMain">Atras</a>
+          <a href="#" class="btn btn-next">Siguiente</a>
+        </div>
+      </div>
+
+      <div class="form-step">
         <div class="input-group">
           <label for="n.empleado">Numero de empleado</label>
           <input type="number" name="n.empleado" id="n.empleado" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="4" onkeypress="return event.charCode >= 48 && event.charCode <= 57" />
@@ -48,8 +68,9 @@
             <option>Doc</option>
           </select>
         </div>
-        <div class="">
-          <a href="#" class="btn btn-next width-50 ml-auto">Siguiente</a>
+        <div class="btns-group">
+          <a href="#" class="btn btn-prev">Atras</a>
+          <a href="#" class="btn btn-next">Siguiente</a>
         </div>
       </div>
       <div class="form-step">
@@ -69,16 +90,12 @@
            </div>
         </div>
         <div class="input-group">
-          <label for="linea.idea">Línea o área</label>
+          <label for="linea.idea">Línea o área de la idea</label>
           <input type="text" name="linea.idea" id="linea.idea" />
         </div>
         <div class="input-group">
-          <label for="est.idea">Estación</label>
+          <label for="est.idea">Estación de la idea</label>
           <input type="text" name="est.idea" id="est.idea" />
-        </div>
-        <div class="input-group">
-          <label for="jefe.idea">Jefe inmediato</label>
-          <input type="text" name="jefe.idea" id="jefe.idea" />
         </div>
         <div class="btns-group">
           <a href="#" class="btn btn-prev">Atras</a>
@@ -88,7 +105,7 @@
       <div class="form-step">
         <div class="input-group">
           <label for="idea">Idea</label>
-          <textarea name="idea" id="idea" rows="3" class="auto_height" oninput="auto_height(this)"></textarea>
+          <textarea name="idea" id="idea" rows="5" class="auto_height" oninput="auto_height(this)"></textarea>
         </div>
         <div class="input-group">
           <label for="benef.idea">Beneficios que aporta tu idea</label>
