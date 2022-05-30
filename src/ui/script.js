@@ -2,14 +2,19 @@ const prevBtns = document.querySelectorAll(".btn-prev");
 const nextBtns = document.querySelectorAll(".btn-next");
 const nextBtnMain = document.querySelectorAll(".btn-nextMain");
 const prevBtnMain = document.querySelectorAll(".btn-prevMain");
+const numIntegrantes = document.getElementById('numInt');
 const progress = document.getElementById("progress");
 const formSteps = document.querySelectorAll(".form-step");
 const progressSteps = document.querySelectorAll(".progress-step");
+const formInt1 = document.getElementById("integrante1");
+const formInt2 = document.getElementById("integrante2");
+const formInt3 = document.getElementById("integrante3");
 const formIdea = document.getElementById("form");
 const formMain = document.getElementById("main");
 
 let formStepsNum = 0;
 hiddenForm(); /*<----Iniciar con el formulario de idea escondido */
+
 
 nextBtns.forEach((btn) => {
   btn.addEventListener("click", () => {
@@ -66,6 +71,7 @@ function updateProgressbar() {
     ((progressActive.length - 1) / (progressSteps.length - 1)) * 100 + "%";
 }
 
+
 /* funcion para que la forma de idea de mejora inicie escondida */
 function hiddenForm(){
   formIdea.style.display = 'none';
@@ -83,6 +89,8 @@ function auto_height(elem) {
   function ctrls() {
     var _this = this;
     this.counter = 1;
+    formInt2.style.display = 'none';
+    formInt3.style.display = 'none';
     this.els = {
       decrement: document.querySelector('.ctrl__button--decrement'),
       counter: {
@@ -96,11 +104,24 @@ function auto_height(elem) {
       var counter = _this.getCounter();
       var nextCounter = (_this.counter > 1) ? --counter : counter;
       _this.setCounter(nextCounter);
+      if (counter === 2) {
+        formInt2.style.display = 'block';
+        formInt2.style.display = 'none';
+      } else {
+        formInt2.style.display = 'none';
+        formInt3.style.display = 'none';
+      };
     };
     this.increment = function() {
       var counter = _this.getCounter();
       var nextCounter = (counter < 3) ? ++counter : counter;
       _this.setCounter(nextCounter);
+      if (counter === 2) {
+        formInt2.style.display = 'block';
+      } else {
+        formInt2.style.display = 'block';
+        formInt3.style.display = 'block';
+      };
     };
     this.getCounter = function() {
       return _this.counter;

@@ -26,17 +26,19 @@
   textarea {
     display: block;
     width: 100%;
-    padding: 0.75rem;
+    padding: 0.35rem;
     border: 1px solid #ccc;
     border-radius: 0.25rem;
+    font-size: 1.1rem;
   }
   
   select{
     display: block;
-    width: 100%;
-    padding: 0.75rem;
+    width: 70%;
+    padding: 0.35rem;
     border: 1px solid #ccc;
     border-radius: 0.25rem;
+    font-size: 1rem;
   }
   
   .width-50 {
@@ -114,7 +116,7 @@
     margin: 0 auto;
     border: 1px solid #ccc;
     border-radius: 0.35rem;
-    padding: 1.95rem;
+    padding: 1.45rem;
   }
   
   .form-step {
@@ -128,7 +130,8 @@
   }
   
   .input-group {
-    margin: 2rem 0;
+    margin-bottom: 1.2rem;
+    margin-block: 1rem;
   }
 
   .inputNempleado{
@@ -142,6 +145,23 @@
     border-radius: 0.25rem;
     text-align: center;
   }
+/* Bordes para numeros de empleado */
+.componentWrapper {
+  border: solid #666;
+  border-radius: 10px;
+  padding: .6em .3em .5em;
+  margin-bottom: 1.5em;
+}
+
+.componentWrapper .header {
+  position:absolute;
+  margin-top:-1.5em;
+  color:white;
+  background: var(--primary-color);
+  border-radius:5px;
+  padding: .1em .1em;
+  padding-bottom: .3em;
+}
   
   @keyframes animate {
     from {

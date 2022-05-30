@@ -21,7 +21,7 @@
 
    <!--  Formulario apra subir tu idea de mejora -->
     <form action="#" class="form" id="form">
-      <h2 class="text-center">Registrar idea de mejora</h2>
+      <h2 class="text-center">Enviar idea de mejora</h2>
 
       <!-- Progress bar -->
       <div class="progressbar">
@@ -36,14 +36,14 @@
       <!-- Steps -->
       <div class="form-step form-step-active">
         <div class="input-group">
-          <label for="n.empleado">Numero de integrantes</label>
-          <h6>(Maximo 3 integrantes)</h6>
+          <label for="n.empleado" style="text-align: center;">Numero de integrantes</label>
+          <h6 style="text-align: center;">(Maximo 3 integrantes)</h6>
           <!-- <input type="number" pattern="\d{1}" name="n.empleado" id="n.empleado" class="inputNempleado" min="1" max="3" maxlength="1"/> -->
           <div class='ctrl'>
             <div class='ctrl__button ctrl__button--decrement'>&ndash;</div>
             <div class='ctrl__counter'>
               <input class='ctrl__counter-input' type='number' min="1" max="3">
-              <div class='ctrl__counter-num'>1</div>
+              <div class='ctrl__counter-num' id="numInt">1</div>
             </div>
             <div class='ctrl__button ctrl__button--increment'>+</div>
           </div>
@@ -55,9 +55,32 @@
       </div>
 
       <div class="form-step">
-        <div class="input-group">
-          <label for="n.empleado">Numero de empleado</label>
-          <input type="number" name="n.empleado" id="n.empleado" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="4" onkeypress="return event.charCode >= 48 && event.charCode <= 57" />
+        <div class='componentWrapper'id="integrante1">
+          <div class="header">Empleado 1
+          </div>
+          <div class="input-group">
+            <label for="name">Nombre</label>
+            <input type="text" name="name" id="name" />
+          </div>
+          <div class="input-group">
+            <label for="area.empleado">Area</label>
+            <select name="area.empleado" id="area.empleado">
+              <option>Gruñón</option>
+              <option>Feliz</option>
+              <option>Dormilón</option>
+              <option>Tímido</option>
+              <option>Estornudo</option>
+              <option>Tontín</option>
+              <option>Doc</option>
+            </select>
+          </div>
+          <div class="input-group">
+            <label for="n.empleado">Numero de empleado</label>
+            <input style="width: 35%;" type="number" name="n.empleado" id="n.empleado" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="4" onkeypress="return event.charCode >= 48 && event.charCode <= 57" />
+          </div>
+      </div>
+      <div class='componentWrapper'id="integrante2">
+        <div class="header">Empleado 2
         </div>
         <div class="input-group">
           <label for="name">Nombre</label>
@@ -75,7 +98,36 @@
             <option>Doc</option>
           </select>
         </div>
-        <div class="btns-group">
+        <div class="input-group">
+          <label for="n.empleado">Numero de empleado</label>
+          <input style="width: 35%;" type="number" name="n.empleado" id="n.empleado" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="4" onkeypress="return event.charCode >= 48 && event.charCode <= 57" />
+        </div>
+      </div>
+      <div class='componentWrapper'id="integrante3">
+        <div class="header">Empleado 3
+        </div>
+        <div class="input-group">
+          <label for="name">Nombre</label>
+          <input type="text" name="name" id="name" />
+        </div>
+        <div class="input-group">
+          <label for="area.empleado">Area</label>
+          <select name="area.empleado" id="area.empleado">
+            <option>Gruñón</option>
+            <option>Feliz</option>
+            <option>Dormilón</option>
+            <option>Tímido</option>
+            <option>Estornudo</option>
+            <option>Tontín</option>
+            <option>Doc</option>
+          </select>
+        </div>
+        <div class="input-group">
+          <label for="n.empleado">Numero de empleado</label>
+          <input style="width: 35%;" type="number" name="n.empleado" id="n.empleado" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="4" onkeypress="return event.charCode >= 48 && event.charCode <= 57" />
+        </div>
+      </div>
+      <div class="btns-group">
           <a href="#" class="btn btn-prev">Atras</a>
           <a href="#" class="btn btn-next">Siguiente</a>
         </div>
