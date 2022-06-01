@@ -106,7 +106,7 @@ function auto_height(elem) {
       _this.setCounter(nextCounter);
       if (counter === 2) {
         formInt2.style.display = 'block';
-        formInt2.style.display = 'none';
+        formInt3.style.display = 'none';
       } else {
         formInt2.style.display = 'none';
         formInt3.style.display = 'none';
