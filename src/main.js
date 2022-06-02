@@ -1,4 +1,10 @@
-const {BrowserWindow} = require('electron')
+const {BrowserWindow} = require('electron');
+const {getConnection} = require('./database')
+
+function createIdea(idea) {
+    const conn = getConnection();
+    console.log(idea);
+}
 
 let window
 
@@ -7,12 +13,16 @@ function createWindow() {
         width: 700,
         height: 800,
         webPreferences: {
-            nodeIntegration: true
-        }
-    })
+            nodeIntegration: true,
+            enableRemoteModule: true,
+            contextIsolation: false,
+           
+        },
+    });
     window.loadFile('src/index.html');
-}
+};
 
 module.exports = {
-    createWindow
+    createWindow,
+    createIdea
 }

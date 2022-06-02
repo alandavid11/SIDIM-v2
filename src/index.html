@@ -59,11 +59,11 @@
           </div>
           <div class="input-group">
             <label for="name">Nombre</label>
-            <input type="text" name="name" id="name" />
+            <input type="text" name="name" id="nombreEmp1" />
           </div>
           <div class="input-group">
             <label for="area.empleado">Area</label>
-            <select name="area.empleado" id="area.empleado">
+            <select name="area.empleado" id="area.empleado1">
               <option>Gruñón</option>
               <option>Feliz</option>
               <option>Dormilón</option>
@@ -75,7 +75,7 @@
           </div>
           <div class="input-group">
             <label for="n.empleado">Numero de empleado</label>
-            <input style="width: 35%;" type="number" name="n.empleado" id="n.empleado" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="4" onkeypress="return event.charCode >= 48 && event.charCode <= 57" />
+            <input style="width: 35%;" type="number" name="n.empleado1" id="n.empleado1" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="4" onkeypress="return event.charCode >= 48 && event.charCode <= 57" />
           </div>
       </div>
       <div class='componentWrapper'id="integrante2">
@@ -83,11 +83,11 @@
         </div>
         <div class="input-group">
           <label for="name">Nombre</label>
-          <input type="text" name="name" id="name" />
+          <input type="text" name="name" id="nombreEmp2" />
         </div>
         <div class="input-group">
           <label for="area.empleado">Area</label>
-          <select name="area.empleado" id="area.empleado">
+          <select name="area.empleado" id="area.empleado2">
             <option>Gruñón</option>
             <option>Feliz</option>
             <option>Dormilón</option>
@@ -99,7 +99,7 @@
         </div>
         <div class="input-group">
           <label for="n.empleado">Numero de empleado</label>
-          <input style="width: 35%;" type="number" name="n.empleado" id="n.empleado" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="4" onkeypress="return event.charCode >= 48 && event.charCode <= 57" />
+          <input style="width: 35%;" type="number" name="n.empleado" id="n.empleado2" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="4" onkeypress="return event.charCode >= 48 && event.charCode <= 57" />
         </div>
       </div>
       <div class='componentWrapper'id="integrante3">
@@ -107,11 +107,11 @@
         </div>
         <div class="input-group">
           <label for="name">Nombre</label>
-          <input type="text" name="name" id="name" />
+          <input type="text" name="name" id="nombreEmp3" />
         </div>
         <div class="input-group">
           <label for="area.empleado">Area</label>
-          <select name="area.empleado" id="area.empleado">
+          <select name="area.empleado" id="area.empleado3">
             <option>Gruñón</option>
             <option>Feliz</option>
             <option>Dormilón</option>
@@ -123,7 +123,7 @@
         </div>
         <div class="input-group">
           <label for="n.empleado">Numero de empleado</label>
-          <input style="width: 35%;" type="number" name="n.empleado" id="n.empleado" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="4" onkeypress="return event.charCode >= 48 && event.charCode <= 57" />
+          <input style="width: 35%;" type="number" name="n.empleado" id="n.empleado3" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="4" onkeypress="return event.charCode >= 48 && event.charCode <= 57" />
         </div>
       </div>
       <div class="btns-group">
@@ -134,7 +134,7 @@
       <div class="form-step">
         <div class="input-group">
           <label for="linea.idea">Negocio</label>
-          <div class="wrapper">
+          <div class="wrapper" id="negocio">
             <input type="radio" name="select" id="option-1" checked>
             <input type="radio" name="select" id="option-2">
               <label for="option-1" class="option option-1">
@@ -177,6 +177,5 @@
       </div>
     </form>
     <script src="./ui/script.js" defer></script>
-    <script src="./ui/app.js"></script>
   </body>
 </html>

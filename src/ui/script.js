@@ -2,7 +2,6 @@ const prevBtns = document.querySelectorAll(".btn-prev");
 const nextBtns = document.querySelectorAll(".btn-next");
 const nextBtnMain = document.querySelectorAll(".btn-nextMain");
 const prevBtnMain = document.querySelectorAll(".btn-prevMain");
-const numIntegrantes = document.getElementById('numInt');
 const progress = document.getElementById("progress");
 const formSteps = document.querySelectorAll(".form-step");
 const progressSteps = document.querySelectorAll(".progress-step");
@@ -15,7 +14,42 @@ const formMain = document.getElementById("main");
 let formStepsNum = 0;
 hiddenForm(); /*<----Iniciar con el formulario de idea escondido */
 
+const main = require('./main')
 
+
+const numInt = document.getElementById("numInt").textContent;
+const nombreEmp1 = document.getElementById("nombreEmp1");
+const areaempleado1 = document.getElementById("area.empleado1");
+const nempleado1 = document.getElementById("n.empleado1");
+const nombreEmp2 = document.getElementById("nombreEmp2");
+const areaempleado2 = document.getElementById("area.empleado2");
+const nempleado2 = document.getElementById("n.empleado2");
+const nombreEmp3 = document.getElementById("nombreEmp3");
+const areaempleado3 = document.getElementById("area.empleado3");
+const nempleado3 = document.getElementById("n.empleado3");
+const negocio = document.getElementById("negocio").textContent;
+const idea = document.getElementById("idea");
+
+formIdea.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const newIdea = {
+        name: nombreEmp1.value,
+        area: areaempleado1.value,
+        numero: nempleado1.value,
+        idea: idea.value
+    }
+
+    main.createIdea(newIdea);
+  
+})
+
+
+
+
+
+// __________________________________________________________________________________________________
+/* Scripts para ayudar a CSS */
 nextBtns.forEach((btn) => {
   btn.addEventListener("click", () => {
     formStepsNum++;
