@@ -1,10 +1,17 @@
 const {BrowserWindow} = require('electron');
 const {getConnection} = require('./database')
 
-function createIdea(idea) {
-    const conn = getConnection();
-    console.log(idea);
-}
+async function createIdea(idea) {
+    try {
+        const conn = await getConnection();
+        idea.NumEmpleado = parseFloat(idea.NumEmpleado)
+        const result = await conn.query('INSERT INTO IdeasMejora SET ', idea)
+        console.log(result)
+    } catch (error) {
+        console.log(error)
+    }
+    
+ }
 
 let window
 

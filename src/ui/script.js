@@ -34,10 +34,10 @@ formIdea.addEventListener('submit', (e) => {
     e.preventDefault();
 
     const newIdea = {
-        name: nombreEmp1.value,
-        area: areaempleado1.value,
-        numero: nempleado1.value,
-        idea: idea.value
+        Nombre: nombreEmp1.value,
+        Area: areaempleado1.value,
+        NumEmpleado: nempleado1.value,
+        Idea: idea.value
     }
 
     main.createIdea(newIdea);

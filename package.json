@@ -16,8 +16,8 @@
   ],
   "author": "Alan Gloria",
   "license": "MIT",
-  "dependencies": {
-    "electron": "^19.0.2",
+  "devDependencies": {
+    "electron": "^19.0.3",
     "electron-reload": "^2.0.0-alpha.1",
     "mssql": "^8.1.2"
   }
