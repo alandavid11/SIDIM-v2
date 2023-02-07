@@ -1,17 +1,19 @@
 const {BrowserWindow} = require('electron');
-const {getConnection} = require('./database')
 
-async function createIdea(idea) {
+
+
+
+/* async function createIdea(){
     try {
-        const conn = await getConnection();
-        idea.NumEmpleado = parseFloat(idea.NumEmpleado)
-        const result = await conn.query('INSERT INTO IdeasMejora SET ', idea)
+        let conn = await getConnection();
+        let result = await conn.request().query('SELECT * from IdeasMejora');
+        return 
         console.log(result)
     } catch (error) {
         console.log(error)
     }
     
- }
+}; */
 
 let window
 
@@ -30,6 +32,5 @@ function createWindow() {
 };
 
 module.exports = {
-    createWindow,
-    createIdea
+    createWindow
 }

@@ -26,10 +26,6 @@ function getConnection(){
 
 };
 
-setTimeout(async() => {
-  const conn = await getConnection();
-  const resultado = await conn.request().query('SELECT * from usuarios');
-  console.log(resultado);
-}, 1500);
+const columns = ['ID_user', 'idea', 'benef', 'area_idea', 'est_idea', 'u_negocio', 'date'];
 
-module.exports = { getConnection }
+module.exports = { getConnection, columns }

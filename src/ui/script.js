@@ -14,7 +14,8 @@ const formMain = document.getElementById("main");
 let formStepsNum = 0;
 hiddenForm(); /*<----Iniciar con el formulario de idea escondido */
 
-const main = require('./main')
+//const main = require('./main')
+const {getConnection, columns} = require('./database');
 
 
 const numInt = document.getElementById("numInt").textContent;
@@ -29,20 +30,33 @@ const areaempleado3 = document.getElementById("area.empleado3");
 const nempleado3 = document.getElementById("n.empleado3");
 const negocio = document.getElementById("negocio").textContent;
 const idea = document.getElementById("idea");
+const benef_idea = document.getElementById("benef.idea");
+const area_idea = document.getElementById("linea.idea");
+const est_idea = document.getElementById("est.idea");
+var date = Date.now();
 
-formIdea.addEventListener('submit', (e) => {
-    e.preventDefault();
+const values = [nempleado1.value, idea.value, benef_idea.value, 'Turbo', date];
 
-    const newIdea = {
-        Nombre: nombreEmp1.value,
-        Area: areaempleado1.value,
-        NumEmpleado: nempleado1.value,
-        Idea: idea.value
-    }
 
-    main.createIdea(newIdea);
-  
-})
+formIdea.addEventListener('submit', async (e) => {
+  e.preventDefault();
+
+  try {
+      let conn = await getConnection();
+      //await conn.request()
+        //.input("ID_user", sql.int, nempleado1.value)
+
+
+
+      let result = await conn.request().query(`INSERT INTO ideas (${columns}) VALUES `, values);
+      //return
+
+      console.log(result);
+      
+  } catch (error) {
+      console.log(error)
+  }
+});
 
 
 
